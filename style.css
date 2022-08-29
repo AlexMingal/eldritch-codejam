@@ -1,0 +1,218 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  background-image: url("./assets/home.jpg");
+  background-size: cover;  
+}
+
+.main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+}
+
+
+.ancient-section {
+  display: flex;
+  justify-content:space-evenly;
+  width: 100vw;
+  /* height: 50%; */
+  /* border : 1px solid white; */
+}
+
+.ancient-section-active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  width: 40%;
+  gap: 20px;
+  /* border : 1px solid white; */
+  transition: 1s;
+}
+
+.ancient-card {
+  width :260px;
+  border-radius: 20px;
+  border: 2px solid rgb(69, 0, 158);
+}
+
+.ancient-card:hover {
+  border-color: rgb(0, 168, 90);
+  border-radius: 10px;
+}
+
+.stateWindow {
+  display: flex;
+  justify-content:space-around;
+  width: 99vw;
+  font-size: 22px;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.564);
+  border: 1px solid rgb(51, 34, 78);
+  color: rgb(233, 215, 250);
+}
+
+.selected {
+  width: 30%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.level-section {
+  display: none; /* по умолчанию скрыто, после выбора Древнего, меняется на flex через JS */
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  width: 20%;
+  height: 90vh;
+  gap: 20px;
+  /* border: 1px solid white; */
+  transition: 1s;
+
+}
+
+.level-btn {
+  width: 150px;
+  height: 40px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: 0.7s;
+}
+
+.level-btn-active {
+  transform: rotate(1turn);
+  background-color: rgb(3, 194, 114);
+
+}
+
+.level-btn:hover {
+  background-color:rgb(132, 2, 119);
+  color: white;
+}
+
+.level-btn:visited {
+  background-color:rgb(0, 194, 6);
+  color: white;
+}
+
+.titleLevel {
+  font-size: 24px;
+  color: azure;
+  font-weight: 500;
+}
+
+
+.deck-section {
+  display: none; /* по умолчанию не видим - как кликнем выбор уровня, свойство сменится на дисплей: флекс */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  gap: 15px;
+  /* border: 1px solid red; */
+  height: 550px;
+}
+
+.deck-section-active {
+  display: flex;
+  transition: 1s;
+}
+
+.shuffle-btn {
+  opacity: 0;
+  /* margin-top: 98px; */
+  width: 150px;
+  height: 50px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 1s;
+}
+
+.shuffle-btn:hover {
+  background-color:rgb(132, 2, 119);
+  color: white;
+}
+
+
+.deck-tracker {
+  flex-direction: row;
+  gap: 15px;
+  width: 500px;
+  justify-content: center;
+  /* border: 1px solid green; */
+  display:none;
+  transition: 0.5s;
+
+}
+
+.tracker-cell {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgb(88, 88, 88);
+  border-radius: 20px;
+  transition: 0.5s;
+  color: rgba(255, 255, 255, 0.842);
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.green {
+  background-color: darkgreen;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.blue {
+  background-color: darkblue;
+}
+
+
+.tracker-stage {
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  margin-top: 0.425em;
+  font-weight: 700;
+}
+
+
+.deck-cards {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+}
+
+.card-closed {
+    width: 150px;
+    height: 220px;
+    border: 1px solid rgba(0, 0, 217, 0.695);
+    background-repeat: no-repeat;
+}
+
+.card-opened {
+  width: 150px;
+  height: 220px;
+  border: 2px solid rgba(0, 69, 13, 0.875);
+  background-repeat: no-repeat;
+}
+
+.deal-btn {
+  width: 160px;
+  height: 70px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  transition: 1s;
+}
